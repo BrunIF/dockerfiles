@@ -1,0 +1,1 @@
+This project provides a [Docker](https://www.docker.io/) image for running [Jenkins](https://jenkins-ci.org/)' latest version using Alex Kasko's [unofficial OpenJDK build](https://github.com/alexkasko/openjdk-unofficial-builds).
