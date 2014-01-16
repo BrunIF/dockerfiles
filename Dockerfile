@@ -13,9 +13,13 @@ RUN su -c "touch .profile" -l node
 RUN su -c "curl https://raw.github.com/creationix/nvm/master/install.sh | sh" -l node
 
 # install v0.8.18 by default
-ENV NODE_JS_VERSION v0.8.18
+ENV NODE_JS_VERSION v0.11.10
 RUN su -c "nvm install $NODE_JS_VERSION " -l node
 RUN su -c "nvm alias default $NODE_JS_VERSION " -l node
+
+# Cannot make sure that npm is updated:
+# fails with 'non-accessable symlink' even when using -s=dev-mapper
+# RUN su -c "npm2 install -g npm" -l node
 
 # log in as 'node' user by default
 CMD su -l node
