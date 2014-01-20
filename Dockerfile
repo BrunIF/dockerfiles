@@ -12,8 +12,8 @@ RUN useradd -s /bin/bash -m -g node -d /home/node node
 RUN su -c "touch .profile" -l node
 RUN su -c "curl https://raw.github.com/creationix/nvm/master/install.sh | sh" -l node
 
-# install v0.8.18 by default
-ENV NODE_JS_VERSION v0.11.10
+# install the specified node.js version and use it by default
+ENV NODE_JS_VERSION v0.10.23
 RUN su -c "nvm install $NODE_JS_VERSION " -l node
 RUN su -c "nvm alias default $NODE_JS_VERSION " -l node
 
