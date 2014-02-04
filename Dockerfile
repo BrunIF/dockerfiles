@@ -13,7 +13,7 @@ RUN su -c "touch .profile" -l node
 RUN su -c "curl https://raw.github.com/creationix/nvm/master/install.sh | sh" -l node
 
 # install the specified node.js version and use it by default
-ENV NODE_JS_VERSION v0.10.23
+ENV NODE_JS_VERSION v0.10.25
 RUN su -c "nvm install $NODE_JS_VERSION " -l node
 RUN su -c "nvm alias default $NODE_JS_VERSION " -l node
 
