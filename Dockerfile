@@ -13,4 +13,4 @@ RUN su -c "cd parsoid && npm install" -l node
 
 # run parsoid as 'node' user by default
 EXPOSE 8000
-CMD su -c "node parsoid/api/server.js" node
+CMD su -c "MW_URL=$MW_URL node parsoid/api/server.js" -l node
