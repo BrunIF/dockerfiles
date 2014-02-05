@@ -15,4 +15,4 @@ RUN groupadd jenkins
 RUN useradd -m -g jenkins -d /var/jenkins jenkins
 
 EXPOSE 8080
-CMD cd /usr/local/jenkins && su -c "java -Djava.a.t.headless=true -jar jenkins.war" jenkins
+CMD cd /usr/local/jenkins && su -c "java -Djava.awt.headless=true -jar jenkins.war" jenkins
